@@ -1,0 +1,10 @@
+{
+  "platforms": ["ios", "android"],
+  "ios": {
+    "modules": ["ExpoQuickActionsModule"],
+    "appDelegateSubscribers": ["AppDelegate"]
+  },
+  "android": {
+    "modules": ["expo.modules.quickactions.ExpoQuickActionsModule"]
+  }
+}

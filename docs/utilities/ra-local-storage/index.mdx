@@ -1,0 +1,148 @@
+---
+id: ra-local-storage
+title: Local Storage
+sidebar_position: 1
+last_update:
+  date: 1/1/2000
+  author: Redon Alla
+---
+The Local Storage Packages is part of **RA Framework**, that provides an asynchronous, unencrypted, persistent, key-value storage API.
+
+Local Storage can only store string data. In order to store object data, you need to serialize it first. For data that can be serialized to JSON, you can use JSON.stringify() when saving the data and JSON.parse() when loading the data.
+
+With `ra-local-storage` you dont needs to serialize and deserialize strings to save or get object from local storage, `ra-local-storage` does it for you.
+
+## Installation
+
+To use the **RA Local Storage** you need to download packages in your local storage, and then you must install the packages with npm locally.
+
+For more details on how to install packages locally [fallow this link](/docs/getting-gtarted/installation).
+
+`ra-local-storage` use expo `@react-native-async-storage/async-storage`. For more details please read [here](https://docs.expo.dev/versions/latest/sdk/async-storage/). 
+
+Installing packages using npm:
+```bash
+npm install C:/ReactNative/framework/ra-local-storage
+```
+
+## Dependencies
+- `'@react-native-async-storage/async-storage'`
+
+
+## Examples
+
+### Save values on local storage
+
+To save values ​​on local storage you only need to pass the key and the value where the value can be a string or any object.
+If the value you needs to store in local storage it is an object, you just need pas the value without the need to serialize it first, the package does it for you.
+
+If you are using typescript you also needs to pass the object type.
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+<TabItem value="javascript" label="Javascript" default>
+
+```js showLineNumbers
+// highlight-start
+import Storage from 'ra-local-storage';
+// highlight-end
+
+//saveing a string
+await Storage.saveItem('string-value-key', 'My string VALUE');
+
+//saveing an object
+await Storage.saveItem('object-value-key', {id: 1, name: 'Redon', lastName: 'Alla'});
+```
+</TabItem>
+<TabItem value="typescript" label="Typescript">
+
+```jsx showLineNumbers
+// highlight-start
+import Storage from 'ra-local-storage';
+// highlight-end
+
+type Author = {
+  id: number;
+  name: string;
+  lastName: string;
+}
+
+//saveing a string
+await Storage.saveItem('string-value-key', 'My string VALUE');
+
+//saveing an object
+await Storage.saveItem<Author>('object-value-key', {id: 1, name: 'Redon', lastName: 'Alla'});
+```
+</TabItem>
+</Tabs>
+
+
+### Get values from local storage
+
+To get values from local storage you only need to pass the key and and an default value to be returned if the value it is not found in local storage.
+The value can be a string or any object.
+To get the value you just need pas the key and defaultvalue without the need to serialize it first, the package does it for you.
+If you are using typescript you also needs to pass the object type.
+
+<Tabs>
+<TabItem value="javascript" label="Javascript" default>
+
+```js showLineNumbers
+// highlight-start
+import Storage from 'ra-local-storage';
+// highlight-end
+
+//saveing a string
+const myValue = await Storage.getItem('string-value-key', 'My string VALUE');
+
+//saveing an object
+const author = await Storage.getItem('object-value-key', {id: 1, name: 'Redon', lastName: 'Alla'});
+```
+</TabItem>
+<TabItem value="typescript" label="Typescript">
+
+```jsx showLineNumbers
+// highlight-start
+import Storage from 'ra-local-storage';
+// highlight-end
+
+type Author = {
+  id: number;
+  name: string;
+  lastName: string;
+}
+
+const defaultAuthor: Author = {
+  id: 1,
+  name: 'Redon',
+  lastName: 'Alla'
+}
+
+//getting a string
+const myValue = await Storage.getItem('string-value-key', 'My default VALUE');
+
+//getting an object
+const author = await Storage.getItem<Author>('object-value-key', defaultAuthor);
+```
+</TabItem>
+</Tabs>
+
+
+### Deleting values from local storage
+
+To delete values from local storage you just need to pas the key.
+
+```js showLineNumbers
+// highlight-start
+import Storage from 'ra-local-storage';
+// highlight-end
+
+await Storage.deleteItem('string-value-key');
+await Storage.deleteItem('object-value-key');
+```
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />

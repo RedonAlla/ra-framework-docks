@@ -1,0 +1,93 @@
+---
+id: ra-skeleton-loading
+title: Skeleton Loading
+sidebar_position: 6
+last_update:
+  date: 1/1/2000
+  author: Redon Alla
+---
+
+The **RA Skeleton Loading** is part of the `RA Framework` and is available under the `ra-skeleton-loading` NPM package.
+
+## Dependencies
+- `ra-theme-context`
+- `react-native-svg`
+
+import Installation from '../_installation.mdx';
+
+<Installation title="RA Skeleton Loading" />
+
+```bash
+npm install C:/ReactNative/framework/ra-skeleton-loading
+```
+
+## API
+
+```jsx
+import SkeletonLoader from 'ra-skeleton-loading';
+```
+
+## Component
+
+**SkeletonLoader**
+
+Type: `React.Component<IContentLoaderProps>`
+
+## Properties
+
+:::info INFO
+`React.Component<IContentLoaderProps>` props extends `SvgProps`] from [`react-native-svg`](https://github.com/software-mansion/react-native-svg)
+:::
+
+|  Name   | Type | Required | Default Value | Description |
+| -- | -- | -- | -- | -- |
+| animate | `boolean` | **false** | `true` | Boolean indicator whether to animate skeleton loading or not. |
+| backgroundColor | [`ColorValue`](https://reactnative.dev/docs/colors) | **false** | `undefined` | Background color. |
+| foregroundColor | [`ColorValue`](https://reactnative.dev/docs/colors) | **false** | `undefined` | Foreground color. |
+| speed | `number` | **false** | `1.2` | Animation speed. |
+| interval | `number` | **false** | `0.25` | Animation interval. |
+| uniqueKey | `string` | **false** | `random string` | Used for unique key for `<Rect fill='' clipPath='' />` |
+| beforeMask | `JSX.Element` | **false** | `random string` | Costum JSX.Element to render before loading mask. |
+
+
+## Usecase Examples
+
+The following example demonstrates the **RA Skeleton Loading** in action.
+
+### Default
+
+import Default from '@site/src/components/docs/ra-skeleton-loading/default';
+
+<Default />
+
+### Animation Speed
+
+import AnimationSpeedExample from '@site/src/components/docs/ra-skeleton-loading/animation-speed';
+
+<AnimationSpeedExample />
+
+
+### Animation
+
+import AnimationExample from '@site/src/components/docs/ra-skeleton-loading/animation';
+
+<AnimationExample />
+
+
+### Animation Interval
+
+import AnimationInterval from '@site/src/components/docs/ra-skeleton-loading/animation-interval';
+
+<AnimationInterval />
+
+### Colors
+
+import Colors from '@site/src/components/docs/ra-skeleton-loading/colors';
+
+<Colors />
+
+### Mask
+
+import Mask from '@site/src/components/docs/ra-skeleton-loading/mask';
+
+<Mask />

@@ -1,0 +1,111 @@
+---
+id: ra-bottom-sheet
+title: Bottom Sheet
+sidebar_position: 4
+last_update:
+  date: 1/1/2000
+  author: Redon Alla
+---
+
+The Bottom Sheet Package is part of **RA Framework** for React Native, and is available under the `ra-icons` NPM package.
+
+A performant interactive bottom sheet with fully configurable options.
+
+import Installation from '../_installation.mdx';
+
+<Installation title="RA Bottom Sheet" />
+
+```bash
+npm install C:/ReactNative/framework/ra-bottom-sheet
+```
+
+## Dependencies
+- `expo-blur`
+- `ra-theme-context`
+
+## API
+
+```jsx
+import BottomSheet from "ra-bottom-sheet";
+```
+
+## Component
+
+**BottomSheet**
+
+Type: `React.PureComponent<BottomSheetProps, BottomSheetStateProps>`
+
+## Properties
+
+|  Name   | Type | Required | Default Value | Description |
+| -- | -- | -- | -- | -- |
+| animationType | One of `'none', 'slide', 'fade'` | **false** | `fade` | Animation type when BottomSheet it is open. |
+| height | number | **false** | `260` | BottomSheet height. |
+| minClosingHeight | number | **false** | `0` | Min height value to close the BottomSheet when drag down. `minClosingHeight` has effect only when closeOnDragDown it is `true` |
+| openDuration | number | **false** | `300` | Animation duration on open ButtonSheet. |
+| closeDuration | number | **false** | `300` | Animation duration on close ButtonSheet. |
+| closeOnDragDown | boolean | **false** | `false` | Boolean value indicating whether to close or not the BottomSheet on OnDragDown. |
+| closeOnPressMask | boolean | **false** | `true` | Boolean value indicating whether to close or not the BottomSheet on OnPressMask. |
+| dragFromTopOnly | boolean | **false** | `false` | Boolean value indicating whether to Drag FromTopOnly. |
+| closeOnPressBack | boolean | **false** | `false` | Boolean value indicating whether to close or not the BottomSheet on background overlay. |
+| maskMode | [`BlurTint`](https://docs.expo.dev/versions/latest/sdk/blur-view/#blurtint) | **false** | isDark ? `dark` : `light` | A tint mode which will be applied to background overlay. |
+| behavior | `height`, `padding`, `position` | **false** | `padding` | behavior for KeyboardAvoidingView. |
+| keyboardAvoidingViewEnabled | boolean | **false** | Default is true of iOS | Enables or disables the KeyboardAvoidingView. |
+| onClose | function of type `void`| **false** | `undefined` | function to call on close event. |
+| onOpen | function of type `void`| **false** | `undefined` | function to call on onOpen event. |
+| children | [`React.ReactNode`](https://reactnative.dev/docs/react-node) | **true** | `undefined` | React.ReactNode to render on BottomSheet. |
+| wrapperStyle | [`StyleProp<ViewStyle>`](https://reactnative.dev/docs/view-style-props) | **false** | `undefined` | ViewStyle to apply on BottomSheet wrapper. |
+| containerStyle | [`StyleProp<ViewStyle>`](https://reactnative.dev/docs/view-style-props) | **false** | `undefined` | ViewStyle to apply on BottomSheet container. |
+| draggableIconStyle | [`StyleProp<ViewStyle>`](https://reactnative.dev/docs/view-style-props) | **false** | `undefined` | ViewStyle to apply on draggable icon. |
+
+## Usecase Examples
+
+The following example demonstrates the BottomSheet in action.
+
+### BottomSheet With action onOpen & onClose
+
+import Actions from '@site/src/components/docs/ra-bottom-sheet/actions';
+
+<Actions />
+
+### Animation Type
+
+import AnimationType from '@site/src/components/docs/ra-bottom-sheet/animation-type';
+
+<AnimationType />
+
+### Behavior
+
+import Behaviors from '@site/src/components/docs/ra-bottom-sheet/behavior';
+
+<Behaviors />
+
+### CloseOnDragDown
+
+import CloseOnDragDown from '@site/src/components/docs/ra-bottom-sheet/close-on-drag-down';
+
+<CloseOnDragDown />
+
+### Height
+
+import Height from '@site/src/components/docs/ra-bottom-sheet/height';
+
+<Height />
+
+### MaskMode
+
+import MaskMode from '@site/src/components/docs/ra-bottom-sheet/mask';
+
+<MaskMode />
+
+### MinClosingHeight
+
+import MinClosingHeight from '@site/src/components/docs/ra-bottom-sheet/min-closing-height';
+
+<MinClosingHeight />
+
+### Styles with StyleSheet
+
+import StylesWithStyleSheet from '@site/src/components/docs/ra-bottom-sheet/style-with-style-sheet';
+
+<StylesWithStyleSheet />

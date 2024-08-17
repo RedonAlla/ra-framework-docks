@@ -1,0 +1,170 @@
+---
+id: ra-tags
+title: Tags
+sidebar_position: 4
+last_update:
+  date: 1/1/2000
+  author: Redon Alla
+---
+
+The **RA Tags** is part of the `RA Framework` and is available under the `ra-tags` NPM package.
+
+## Dependencies
+- `ra-theme-context`
+
+import Installation from '../_installation.mdx';
+
+<Installation title="RA Tags"  />
+
+```bash
+npm install C:/ReactNative/framework/ra-tags
+```
+
+## API
+
+```jsx
+import Tag from 'ra-tags';
+```
+
+## Component
+
+**Tag**
+
+Type: ` React.PureComponent<TagProps>`
+
+## Properties
+
+:::info INFO
+`TagProps` props extends [`ViewProps`](https://reactnative.dev/docs/view#props) from `react-native`
+:::
+
+|  Name   | Type | Required | Default Value | Description |
+| -- | -- | -- | -- | -- |
+| text | `string` | **true** | `undefined` | Text to display on tag. |
+| textColor | [`ColorValue`](https://reactnative.dev/docs/colors) | **false** | `theme.color.default` | Text Color. |
+| backgroundColor | [`ColorValue`](https://reactnative.dev/docs/colors) | **false** | `theme.color.default` | Background Color. |
+| children  | [`ReactNode`](https://reactnative.dev/docs/react-node) | **false** | `undefined` | ReactNode to render custom react element. |
+| borderWidth  | [`BorderWidth`](#borderwidth) | **false** | `'none'` | Optional borders width. |
+| borderColor | [`ColorValue`](https://reactnative.dev/docs/colors) | **false** | `undefined` | Borders color according `react-native` ColorValue. |
+| onDelete | (event: React.BaseSyntheticEvent) => void | **false** | `undefined` | If provided, will render a Delete icon button, which will call this callback on press. |
+| size | [`TagSize`](#tagsize) | **false** | `'default'` | Tag Size variable. |
+| type | [`TagType`](#tagtype) | **false** | `'default'` | Tag type. |
+| radius | [`TagRadius`](#tagtype) | **false** | `'medium'` | Tag border radius. |
+| color | [`TagColor`](#tagcolor) | **false** | `theme.color.default` | Color by theme or a custom color according `react-native` ColorValue. |
+| textProps | [`TextProps`](https://reactnative.dev/docs/text#props) | **false** | `undefined` | Props to pass to the inner [`Text`](https://reactnative.dev/docs/text) component. |
+
+
+### BorderWidth
+
+* 'none' = 0
+* 'hairline' = StyleSheet.hairlineWidth
+* 'thin' = 1
+* 'base' = 2
+* 'thick' = 3
+* number
+
+### TagSize
+
+* 'small'
+* 'default'
+* 'medium'
+* 'large'
+
+### TagType
+
+* 'default'
+* 'text'
+* 'ghost'
+
+### TagRadius
+
+* 'none'
+* 'small'
+* 'medium'
+* 'large'
+* 'full'
+* number
+
+### TagColor
+
+* 'default'
+* 'primary'
+* 'secondary'
+* 'info'
+* 'success'
+* 'warning'
+* 'error'
+* 'dark'
+* 'light'
+* [`ColorValue`](https://reactnative.dev/docs/colors);
+
+## Usecase Examples
+
+The following example demonstrates the **RA Tags** in action.
+
+
+### Background Color
+
+import BackgroundColor from '@site/src/components/docs/ra-tags/background-color';
+
+<BackgroundColor />
+
+### Border Color
+
+import BorderColor from '@site/src/components/docs/ra-tags/border-color';
+
+<BorderColor />
+
+### Border Width
+
+import BorderWidth from '@site/src/components/docs/ra-tags/border-width';
+
+<BorderWidth />
+
+### Children
+
+import Children from '@site/src/components/docs/ra-tags/children';
+
+<Children />
+
+### Colors
+
+import Colors from '@site/src/components/docs/ra-tags/colors';
+
+<Colors />
+
+### OnDelete
+
+import OnDelete from '@site/src/components/docs/ra-tags/delete';
+
+<OnDelete />
+
+### Border Radius
+
+import BorderRadius from '@site/src/components/docs/ra-tags/radius';
+
+<BorderRadius />
+
+### Size
+
+import Size from '@site/src/components/docs/ra-tags/sizes';
+
+<Size />
+
+### Text Color
+
+import TextColor from '@site/src/components/docs/ra-tags/text-color';
+
+<TextColor />
+
+### [TextProps](https://reactnative.dev/docs/text#props)
+
+import TextProps from '@site/src/components/docs/ra-tags/text-props';
+
+<TextProps />
+
+### Type
+
+import Types from '@site/src/components/docs/ra-tags/types';
+
+<Types />

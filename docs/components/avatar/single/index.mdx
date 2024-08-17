@@ -1,0 +1,103 @@
+---
+id: ra-avatar-single
+title: Single Avatar
+sidebar_position: 0
+last_update:
+  date: 1/1/2000
+  author: Redon Alla
+---
+
+## API
+
+```jsx
+import Avatar from 'ra-avatar';
+```
+
+## Component
+
+**Avatar**
+
+Type: `React.PureComponent<AvatarProps>`
+
+## Props
+
+**AvatarProps** of `ra-avatar` package extends [`ImageProps`](https://docs.expo.dev/versions/latest/sdk/image/#imageprops) | [`TextProps`](https://reactnative.dev/docs/text#props).
+
+|  Name   | Type | Required | Default Value | Description |
+| -- | -- | -- | -- | -- |
+| type | [`Type`](#type) | **true** | `image` | Avatar Type. `image`, `icon` and `text` are supported |
+| fillMode | [`FillMode`](#fillmode) | **false** | `solid` | Fill Mode |
+| radius |  [`BorderRadius`](#borderradius) | **false** | `full` | Avatar border radius. |
+| size | [`Sizes`](#sizes) | **false** | `medium` | Avatar Size. |
+| backgroundColor | [`ColorValue`](https://reactnative.dev/docs/colors) | **false** | `undefined` | Background color according `react-native` ColorValue. |
+| borderColor | [`ColorValue`](https://reactnative.dev/docs/colors) | **false** | `undefined` | Borders color according `react-native` ColorValue. |
+| color | [`ColorValue`](https://reactnative.dev/docs/colors) | **false** | `default` | Color by theme or a custom color according `react-native` ColorValue. |
+| borderWidth | [`BorderWidth`](#borderwidth) | **false** | `none` | Optional avatar borders width. |
+| text | `string` | **false** | `undefined` | Text to display on avatar for type `Type = 'text'` |
+| textColor | [`ColorValue`](https://reactnative.dev/docs/colors) | **false** | `undefined` | Text color according `react-native` ColorValue. Available for `Type = 'text'` |
+| icon | [`IconName`](/docs/components/icons/ra-icons-basic-usage#iconname) | **false** | `undefined` | Name of icon. Icon props for `Avatar Type = 'icon'` |
+| iconColor | [`ColorValue`](https://reactnative.dev/docs/colors) | **false** | `undefined` | Icon color according `react-native` ColorValue. Available for `Type = 'icon'` |
+
+
+### Type
+- `image`
+- `icon`
+- `text`
+
+### FillMode
+- `solid`
+- `outline`
+- `ghost`
+
+### BorderRadius
+- `none`
+- `small`
+- `medium`
+- `large`
+- `full`
+- `number`
+
+### Sizes
+- `small`
+- `medium`
+- `large`
+- `number`
+
+### BorderWidth
+- `none`
+- `hairline`
+- `thin`
+- `base`
+- `thick`
+- `number`
+
+
+##  Usecase Examples
+
+The following example demonstrates the different types of Avatar in action.
+
+### Image Type
+
+import ImageType from '@site/src/components/docs/ra-avatar/single/image/examples/Color.Example';
+
+<ImageType />
+
+### Icon Type
+
+import IconType from '@site/src/components/docs/ra-avatar/single/icon/examples/Color.Example';
+
+<IconType />
+
+### Text Type
+
+import TextType from '@site/src/components/docs/ra-avatar/single/text/examples/Color.Example';
+
+<TextType />
+
+<br />
+<br />
+<br />
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />

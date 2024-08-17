@@ -1,0 +1,131 @@
+---
+id: ra-icons-custom-icons
+title: Custom Icons
+sidebar_position: 1
+last_update:
+  date: 1/1/2000
+  author: Redon Alla
+---
+
+# Custom Icons
+
+`ra-icons` package uses custom icon fonts created based on a [**IcoMoon**](https://icomoon.io/).
+
+You can find more details about `@expo/vector-icons` on [Expo official page](https://docs.expo.dev/guides/icons/) and section [**createIconSetFromIcoMoon**](https://docs.expo.dev/guides/icons/#createiconsetfromicomoon)
+
+
+## Generating Icons set
+
+To *add*, *edit* or *remove* icons from `ra-icons` package you first must extract icons form package and then uplod `selection.json` file in [**IcoMoon**](https://icomoon.io/).
+From [**IcoMoon**](https://icomoon.io/) you can *add*, *edit* or *remove* any icon you want.
+
+:::danger CAUTION
+
+Your loading icon you should remain as **spinner** because by this name it is used by other components.
+
+:::
+
+After selecting your icons set you must download your fonts and `selection.json` file and load `.ttf` file on your project.
+See section [**Basic Usage**](/docs/components/icons/ra-icons-basic-usage) how to load your icons font.
+
+After loading your icons font you must override globally `icon` object from `ra-icons` package.
+See section [**Using custom Icons Set**](#using-custom-icons-set).
+
+## Using custom Icons Set
+
+For more details on how to use/add expo constants fallow this [lik](https://docs.expo.dev/versions/latest/sdk/constants/) or this [lik](https://docs.expo.dev/workflow/configuration/)
+
+:::info INFO
+
+`icon` object and interface you can create automaticly from section [**Generate Icon object**](#generate-icon-object) by uploading [**Fontello**](https://icomoon.io/) `selection.json` file.
+
+:::
+
+### Javascript
+To use your custom *Icon Set* you should add your icons (key value) on expo constants.
+On root of your project add a new file named `app.config.js` and there you can add your constants (configurations) and in this case your *Icon Set* as an object of key value.
+
+```jsx title="/src/app.config.js" showLineNumbers
+module.exports = {
+  //...
+  // All values in extra will be passed to your app.
+  extra: {
+    //...
+    // highlight-start
+    icons: {
+        "spinner": "\ue834",
+        "test": "\u2713"
+      }
+    }
+    // highlight-end
+    // ...
+  }
+  // ...
+```
+
+### Typescript
+To use your custom *Icon Set* you should add your icons (key value) on expo constants.
+On root of your project add a new file named `app.config.ts`, you also needs to import `ExpoConfig` and `ConfigContext` from `expo/config`.
+In `app.config.ts` you can add your constants (configurations) and in this case your *Icon Set* as an object of key value.
+
+```jsx title="/src/app.config.ts" showLineNumbers
+import { ExpoConfig, ConfigContext } from 'expo/config';
+
+export default ({ config }: ConfigContext): ExpoConfig => ({
+  ...config,
+  //...
+  extra: {
+    // highlight-start
+    icons: {
+      "spinner": "\ue834",
+      "test": "\u2713"
+    }
+    // highlight-end
+  },
+  // ...
+});
+```
+
+For ***Typescript*** you also needs to override globally **IconName** interface.
+
+In TypeScript, you can override the type definitions of a package by creating a new declaration file with the same name as the package and placing it in your project's `typings` or `@types` directory.
+
+Here's an example of how you can override the type definitions of the react package:
+
+Create a new folder named (in this case) `ra-icons` and inside create a new file named `index.d.ts` in your project's `typings` or `@types` directory.
+Add your custom type definitions to the file, like so:
+
+```jsx title="/typings/ra-icons/index.d.ts" showLineNumbers
+declare module 'ra-icons' {
+
+  interface IconName {
+    "loading": string;
+    "test": string;
+  }
+
+  export interface IconProps extends TextProps {
+    name: keyof IconName;
+    size?: number;
+    color?: ColorValue;
+  }
+
+  const Icon: React.MemoExoticComponent<(props: IconProps) => JSX.Element>;
+  const Spinner: React.MemoExoticComponent<(props: IconProps) => JSX.Element>;
+
+  export { Spinner };
+  export default Icon;
+}
+```
+
+In this example, we're adding a `loading` and `test` property to the ***IconName*** interface, which is part of the `ra-icons` package.
+
+Now, whenever you use the `IconProps` interface in your code, TypeScript will use your custom definition instead of the one provided by the `ra-icons` package.
+
+
+## Generate Icon object
+
+Upload here your `selection.json` file downloaded from [**Fontello**](https://icomoon.io/) to generate code for icons and file to globaly override ***IconName*** interface, for `ra-icons` package.
+
+import GenerateIconObject from '@site/src/components/Icons/GenerateIconObject';
+
+<GenerateIconObject />

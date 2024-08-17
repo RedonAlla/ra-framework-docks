@@ -1,0 +1,76 @@
+---
+id: ra-avatar-group
+title: Group Avatar
+sidebar_position: 1
+last_update:
+  date: 1/1/2000
+  author: Redon Alla
+---
+
+**AvatarGroup** is part of the [**ra-avatar**](../) package.
+To use the **AvatarGroup** you needs to install `ra-avatar` package. [Fallow this link](../#installation) on how to install the package.
+
+## API
+
+```jsx
+import { AvatarGroup } from 'ra-avatar';
+```
+
+## Component
+
+**AvatarGroup**
+
+Type: `React.PureComponent<AvatarGroupProps>`
+
+## Props
+
+AvatarGroup extends [`ViewProps`](https://reactnative.dev/docs/view#props) from **React Native**.
+
+|  Name   | Type | Required | Default Value | Description |
+| -- | -- | -- | -- | -- |
+| sortIndex | `string` | **false** | `asc` | `asc` or `desc` are supported |
+| itemPadding | `number` | **false** | 13 |  |
+| itemBorderWidth | [`BorderWidth`](docs/components/avatar/single/#borderwidth) | **false** | `thick` | Optional avatar borders width. |
+| itemBorderColor | [`ColorValue`](https://reactnative.dev/docs/colors) | **false** | ``theme.colors.card`` | Borders color according `react-native` ColorValue. |
+| children | Array of React.ReactElement of type [`AvatarProps`](/docs/components/avatar/single/#props) | **true** | `full` | |
+
+
+## Usecase Examples
+
+The following example demonstrates the different types of Avatar Groups in action.
+
+### Children
+
+import Children from '@site/src/components/docs/ra-avatar/group/children';
+
+<Children />
+
+### SortIndex
+
+import SortIndex from '@site/src/components/docs/ra-avatar/group/sort-index';
+
+<SortIndex />
+
+### ItemBorderColor
+
+import ItemBorderColor from '@site/src/components/docs/ra-avatar/group/item-border-color';
+
+<ItemBorderColor />
+
+### ItemBorderWidth
+
+import ItemBorderWidth from '@site/src/components/docs/ra-avatar/group/item-border-width';
+
+<ItemBorderWidth />
+
+### ItemPadding
+
+import ItemPadding from '@site/src/components/docs/ra-avatar/group/item-padding';
+
+<ItemPadding />
+
+### Combinations
+
+import Combinations from '@site/src/components/docs/ra-avatar/group/combinations';
+
+<Combinations />

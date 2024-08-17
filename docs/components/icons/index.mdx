@@ -1,0 +1,48 @@
+---
+id: ra-icons
+title: Icons
+sidebar_position: 0
+last_update:
+  date: 1/1/2000
+  author: Redon Alla
+---
+
+**RA Framework** suite delivers more than 400 integrated font icons for its components.
+
+The **RA Icons** is part of the `RA Framework` and is available under the `ra-icons` NPM package.
+
+# What Are Icon Fonts
+Icon fonts are fonts which contain vector glyphs instead of letters and numbers. You can style them with CSS by using all styling properties that can be applied to a regular text in a modern browser.
+
+
+## Dependencies
+- `ra-theme-context`
+
+import Installation from '../_installation.mdx';
+
+<Installation title="RA Icons" />
+
+```bash
+npm install C:/ReactNative/framework/ra-avatar
+```
+
+## API
+
+```jsx
+import Icon from 'ra-icons';
+```
+
+## Component
+
+**Icon**
+
+Type: `React.MemoExoticComponent<(props: IconProps) => React.JSX.Element>`
+
+## Icons List
+
+**RA Icons** set contains 20 icons but you can create and use your own icon set. See section [**Custom Icons**](https://docs.expo.dev/archive/classic-updates/preloading-and-caching-assets/#pre-loading-and-caching-assets) how to create and use your set of icons.
+
+
+import IconsList from '@site/src/components/Icons/IconsList';
+
+<IconsList />
