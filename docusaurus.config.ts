@@ -39,7 +39,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/RedonAlla/ra-framework-docks/',
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
         },
@@ -67,6 +67,7 @@ const config: Config = {
   ],
 
   plugins: [
+    '@docusaurus/theme-live-codeblock',
     [require.resolve('./customWebpack5Plugin.js'), {}],
     ["@gorhom/docusaurus-react-native-plugin",
       {
@@ -190,8 +191,19 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} RA Framework, Inc. Built with Docusaurus.`,
     },
     prism: {
+      additionalLanguages: [
+        'bash'
+      ],
       theme: prismThemes.nightOwlLight,
       darkTheme: prismThemes.nightOwl,
+    },
+    themes: ['@docusaurus/theme-live-codeblock'],
+    liveCodeBlock: {
+      /**
+       * The position of the live playground, above or under the editor
+       * Possible values: "top" | "bottom"
+       */
+      playgroundPosition: 'bottom',
     },
   } satisfies Preset.ThemeConfig,
 };

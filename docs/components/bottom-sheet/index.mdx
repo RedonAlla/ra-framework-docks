@@ -15,7 +15,7 @@ import Installation from '../_installation.mdx';
 
 <Installation title="RA Bottom Sheet" />
 
-```bash
+```bash npm2yarn
 npm install C:/ReactNative/framework/ra-bottom-sheet
 ```
 
@@ -109,3 +109,64 @@ import MinClosingHeight from '@site/src/components/docs/ra-bottom-sheet/min-clos
 import StylesWithStyleSheet from '@site/src/components/docs/ra-bottom-sheet/style-with-style-sheet';
 
 <StylesWithStyleSheet />
+
+## Playground
+
+```jsx live noInline
+
+type Props = {
+  children?: React.ReactNode;
+  close?: () => void;
+}
+
+const MockContainer = (props: Props) => (
+  <div style={styles.container}>
+    <p style={styles.text}>Bottom Sheet mock content</p>
+    { props.children ?? props.children }
+
+    <Button text='Close' color='error' onPress={props.close}/>
+  </div>
+);
+
+const styles = {
+  container: {
+    backgroundColor: '#f9c2ff',
+    padding: 20,
+    marginVertical: 8,
+    marginHorizontal: 16,
+    borderRadius: 4
+  },
+  text: {
+    fontSize: 32,
+    paddingVertical: 15,
+    color: 'black'
+  }
+};
+
+const BottomSheetExample = () => {
+  const refBottomSheet = React.useRef<BottomSheetModal>(null);
+  const open = () => refBottomSheet.current.open();
+  const close = () => refBottomSheet?.current?.close();
+  const showAlert = (title: string, content: string) => console.log(title, '\n', content);
+
+  console.log('refBottomSheet: ', refBottomSheet)
+
+  return (
+    <>
+      <Button color='primary' text='Test BottomSheet' onPress={open}/>
+
+      {/*Play with BottomSheet props to see live changes;*/}
+
+      <BottomSheet ref={refBottomSheet}
+                  onOpen={() => showAlert('Modal Open', 'Modal is opened.')}
+                  onClose={() => showAlert('Modal Closed', 'Modal is closed.')} >
+        <MockContainer close={close} />
+      </BottomSheet>
+    </>
+  )
+}
+
+render(
+  <BottomSheetExample />
+);
+```

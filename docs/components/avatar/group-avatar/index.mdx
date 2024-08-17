@@ -74,3 +74,28 @@ import ItemPadding from '@site/src/components/docs/ra-avatar/group/item-padding'
 import Combinations from '@site/src/components/docs/ra-avatar/group/combinations';
 
 <Combinations />
+
+## Playground
+
+```jsx live noInline
+//Play with props to see live changes;
+
+const styles = {
+  groupStyle: {
+    paddingTop: 8,
+    paddingBottom: 8,
+    paddingRight: 8,
+    paddingLeft: 21,
+    borderRadius: 99,
+    backgroundColor: '#ed143d30'
+  }
+};
+
+render(
+  <AvatarGroup style={styles.groupStyle}>
+    <Avatar text='RA' size='large' type='text' color='primary' />
+    <Avatar icon='avatar' size='large' type='icon' color='success' />
+    <Avatar source="/img/logo.svg" size='large' color='info' />
+  </AvatarGroup>
+);
+```

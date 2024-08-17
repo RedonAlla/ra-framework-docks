@@ -16,7 +16,7 @@ import Installation from '../_installation.mdx';
 
 <Installation title="RA Badges" />
 
-```bash
+```bash npm2yarn
 npm install C:/ReactNative/framework/ra-badges
 ```
 
@@ -187,3 +187,15 @@ import TextProps from '@site/src/components/docs/ra-badges/text-props';
 import Types from '@site/src/components/docs/ra-badges/types';
 
 <Types />
+
+## Playground
+
+```jsx live noInline
+//Play with props to see live changes;
+
+render(
+  <Badge text='10' type='default' color='error'>
+    <Button color='primary' text="Playground Badge Component"/>
+  </Badge>
+);
+```

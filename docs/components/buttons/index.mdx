@@ -21,7 +21,7 @@ import Installation from '../_installation.mdx';
 
 <Installation title="RA SButtons" />
 
-```bash
+```bash npm2yarn
 npm install C:/ReactNative/framework/ra-buttons
 ```
 
@@ -224,3 +224,21 @@ import RenderChildren from '@site/src/components/docs/ra-buttons/render-children
 import StylingWithStyleSheet from '@site/src/components/docs/ra-buttons/styling-with-stylesheet';
 
 <StylingWithStyleSheet />
+
+
+## Playground
+
+```jsx live noInline
+//Play with props to see live changes;
+
+render(
+  <Button
+    text='Button'
+    color='primary'
+    activeColor='#ed143d'
+    radius='full'
+    size='large'
+    iconLeft='star'
+  />
+);
+```

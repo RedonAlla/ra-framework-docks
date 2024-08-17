@@ -21,7 +21,11 @@ Type: `React.PureComponent<AvatarProps>`
 
 ## Props
 
-**AvatarProps** of `ra-avatar` package extends [`ImageProps`](https://docs.expo.dev/versions/latest/sdk/image/#imageprops) | [`TextProps`](https://reactnative.dev/docs/text#props).
+:::info INFO
+**AvatarProps** of `ra-avatar` package extends
+[`ImageProps`](https://docs.expo.dev/versions/latest/sdk/image/#imageprops) | [`TextProps`](https://reactnative.dev/docs/text#props).
+:::
+
 
 |  Name   | Type | Required | Default Value | Description |
 | -- | -- | -- | -- | -- |
@@ -93,6 +97,14 @@ import IconType from '@site/src/components/docs/ra-avatar/single/icon/examples/C
 import TextType from '@site/src/components/docs/ra-avatar/single/text/examples/Color.Example';
 
 <TextType />
+
+## Playground
+
+```jsx live noInline
+//Play with props to see live changes;
+
+render(<Avatar source='/img/logo.svg' size={120} color='primary' borderWidth='thin' fillMode='ghost' borderColor='crimson'/>);
+```
 
 <br />
 <br />
