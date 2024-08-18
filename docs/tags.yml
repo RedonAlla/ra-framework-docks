@@ -1,16 +1,23 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+framework:
+  label: RA Framework
+  permalink: /ra-framework
+  description: RA Framework is a component library that enables developers to build universal design systems. It is built on top of React Native, allowing you to develop apps for Android, iOS, and the Web.
+react:
+  label: React
+  permalink: /react
+  description: The library for web and native user interfaces.
+react-native:
+  label: React Native
+  description: Create native apps for Android, iOS, and more using React
+expo:
+  label: Expo
+  permalink: /expo
+  description: Create universal native apps with React that run on Android, iOS, and the web. Iterate with confidence.
+component:
+  label: Component
+  permalink: /component
+  description: Create user interfaces from components.
+utilities:
+  label: Utilities
+  permalink: /utilities
+  description: RA Utilities are part of RA Frameworks witch provides some utilities packages.
