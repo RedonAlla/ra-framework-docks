@@ -1,6 +1,6 @@
 framework:
-  label: RA Framework
-  permalink: /ra-framework
+  label: Framework
+  permalink: /framework
   description: RA Framework is a component library that enables developers to build universal design systems. It is built on top of React Native, allowing you to develop apps for Android, iOS, and the Web.
 react:
   label: React
@@ -21,3 +21,19 @@ utilities:
   label: Utilities
   permalink: /utilities
   description: RA Utilities are part of RA Frameworks witch provides some utilities packages.
+avatar:
+  label: Avatar
+  permalink: /avatars
+  description: Avatars can be used to represent people or objects. It supports images, Icons, or letters.
+badge:
+  label: Badge
+  permalink: /badges
+  description: Small numerical value or status descriptor for UI elements.
+bottomSheet:
+  label: BottomSheet
+  permalink: /bottomSheet
+  description: Overlay Modal that displays content from the bottom of the screen. They can provide users with quick access to contextual information, actions, or settings without interrupting their current workflow.
+button:
+  label: Button
+  permalink: /buttons
+  description: Buttons allow users to trigger an action or display content.

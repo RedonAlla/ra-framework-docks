@@ -1,0 +1,1 @@
+export const imageExample ="/ra-framework-docks/img/logo.svg"

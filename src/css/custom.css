@@ -164,7 +164,7 @@ li.nav_session.utilities > div > a::before {
   content: '🛠';
 }
 
-.menu__link.menu__link--sublist {
+/* .menu__link.menu__link--sublist {
   color: var(--ifm-color-gray-600) !important;
   font-size: .75rem;
   font-weight: 700;
@@ -172,7 +172,7 @@ li.nav_session.utilities > div > a::before {
   margin-bottom: 2px;
   padding: 0;
   text-transform: uppercase;
-}
+} */
 /* -------------- END Side Bar -----------------*/
 
 /* -------------- START Span Highlight ---------------*/

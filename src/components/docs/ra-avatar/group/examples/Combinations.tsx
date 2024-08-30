@@ -13,7 +13,7 @@ export default class extends React.PureComponent<{}, {}> {
         <AvatarGroup style={styles.combinations}>
           <Avatar text='RA' size='large' type='text' color='primary' />
           <Avatar icon='avatar' size='large' type='icon' color='success' />
-          <Avatar source="/img/logo.svg" size='large' color='info' />
+          <Avatar source={imageExample} size='large' color='info' />
         </AvatarGroup>
       </div>
     );

@@ -27,3 +27,12 @@
   margin-bottom: 0.2rem;
   font-weight: bold;
 }
+
+.column {
+  flex: 1 1 0%;
+  display: flex;
+  row-gap: 16px;
+  column-gap: 25px;
+  flex-direction: column;
+  height: fit-content;
+}

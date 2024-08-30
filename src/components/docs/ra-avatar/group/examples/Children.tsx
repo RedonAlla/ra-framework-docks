@@ -27,16 +27,16 @@ export default class extends React.PureComponent<{}, {}> {
 
         {/* Group Avatar with type image */}
         <AvatarGroup>
-          <Avatar source='/img/logo.svg' color='primary' />
-          <Avatar source='/img/logo.svg' color='primary' />
-          <Avatar source='/img/logo.svg' color='primary' />
+          <Avatar source={imageExample} color='primary' />
+          <Avatar source={imageExample} color='primary' />
+          <Avatar source={imageExample} color='primary' />
         </AvatarGroup>
 
         {/* Group Avatar with mixed types */}
         <AvatarGroup>
           <Avatar text='R A' type='text' color='primary' />
           <Avatar icon='avatar' type='icon' color='primary' />
-          <Avatar source='/img/logo.svg' color='primary' />
+          <Avatar source={imageExample} color='primary' />
         </AvatarGroup>
 
       </div>
