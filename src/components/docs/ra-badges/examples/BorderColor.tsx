@@ -1,9 +1,9 @@
 import React from 'react';
 
 // highlight-start
-import Badge from 'ra-badges';
+import Badge from '@ra/badges';
 // highlight-end
-import Button from 'ra-buttons';
+import Button from '@ra/buttons';
 
 
 export default class extends React.PureComponent<{}, {}> {

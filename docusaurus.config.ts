@@ -6,7 +6,7 @@ const path = require("path");
 const config: Config = {
   title: 'RA Framework',
   tagline: 'RA Framework is a component library that enables developers to build universal design systems. It is built on top of React Native, allowing you to develop apps for Android, iOS, and the Web.',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logo.svg',
 
   // Set the production url of your site here
   url: 'https://redonalla.github.io/',
@@ -40,8 +40,11 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/RedonAlla/ra-framework-docks/',
+          // editUrl:
+          //   'https://github.com/RedonAlla/ra-framework-docks',
+          editUrl: ({locale, versionDocsDirPath, docPath}) => {
+            return `https://github.com/RedonAlla/ra-framework-docks/edit/main/docs/${docPath}`;
+          },
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
         },
@@ -62,6 +65,13 @@ const config: Config = {
             require.resolve('./src/css/custom.css'),
             require.resolve('./src/css/docs.css'),
             require.resolve('./src/css/icons.css'),
+
+            
+            require.resolve('./src/css/homepage/animate.css'),
+            // require.resolve('./src/css/homepage/bootstrap.min.css'),
+            require.resolve('./src/css/homepage/lineicons.css'),
+            require.resolve('./src/css/homepage/default.css'),
+            require.resolve('./src/css/homepage/style.css'),
           ]
         },
       } satisfies Preset.Options,
@@ -119,6 +129,14 @@ const config: Config = {
     ]
   ],
 
+  //Add custom js.
+  // clientModules: [
+  //   require.resolve('./static/js/_clarity.js'),
+  // ],
+  clientModules: [
+    './static/js/popper.min.js',  './static/js/wow.min.js','./static/js/modernizr-3.7.1.min.js',
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/logo.svg',
@@ -139,11 +157,17 @@ const config: Config = {
           position: 'left',
           label: 'Documentation',
         },
+        {
+          href: 'https://redonalla.github.io/ra-framework-demo',
+          label: 'Demo App',
+          position: 'left',
+        },
         // {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          href: 'https://github.com/RedonAlla/ra-framework-docks',
           position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
         },
       ],
     },
@@ -154,38 +178,50 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Getting Started',
+              to: '/docs/getting-started',
+            },
+            {
+              label: 'Theme',
+              to: '/docs/theme',
+            },
+            {
+              label: 'Components',
+              to: '/docs/getting-components',
+            },
+            {
+              label: 'Utilities',
+              to: '/docs/utilities',
             },
           ],
         },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
-        },
+        // {
+        //   title: 'Community',
+        //   items: [
+        //     {
+        //       label: 'Stack Overflow',
+        //       href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+        //     },
+        //     {
+        //       label: 'Discord',
+        //       href: 'https://discordapp.com/invite/docusaurus',
+        //     },
+        //     {
+        //       label: 'Twitter',
+        //       href: 'https://twitter.com/docusaurus',
+        //     },
+        //   ],
+        // },
         {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'Demo App',
+              href: 'https://redonalla.github.io/ra-framework-demo/',
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/RedonAlla/ra-framework-docks',
             },
           ],
         },

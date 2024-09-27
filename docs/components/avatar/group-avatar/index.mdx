@@ -3,9 +3,9 @@ id: ra-avatar-group
 title: Group Avatar
 sidebar_position: 1
 last_update:
-  date: 1/1/2000
+  date: 2024-09-24
   author: Redon Alla
-tags: [react, react-native, expo, framework, component]
+tags: [react, react-native, expo, framework, component, avatar]
 ---
 
 **AvatarGroup** is part of the [**ra-avatar**](../) package.
@@ -14,7 +14,7 @@ To use the **AvatarGroup** you needs to install `ra-avatar` package. [Fallow thi
 ## API
 
 ```jsx
-import { AvatarGroup } from 'ra-avatar';
+import { AvatarGroup } from '@ra/avatar';
 ```
 
 ## Component
@@ -96,7 +96,7 @@ render(
   <AvatarGroup style={styles.groupStyle}>
     <Avatar text='RA' size='large' type='text' color='primary' />
     <Avatar icon='avatar' size='large' type='icon' color='success' />
-    <Avatar source="/img/logo.svg" size='large' color='info' />
+    <Avatar source={imageExample} size='large' color='info' />
   </AvatarGroup>
 );
 ```

@@ -1,7 +1,7 @@
 import React from 'react';
 
 // highlight-start
-import { Spinner } from 'ra-icons';
+import { Spinner } from '@ra/icons';
 // highlight-end
 
 export default class extends React.PureComponent<{}, {}> {

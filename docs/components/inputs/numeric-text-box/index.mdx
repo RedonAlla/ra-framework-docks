@@ -1,0 +1,41 @@
+---
+id: ra-inputs-numeric-textbox
+title: Numeric Text Box
+sidebar_position: 1
+last_update:
+  date: 2024-09-24
+  author: Redon Alla
+tags: [react, react-native, expo, framework, component]
+---
+
+**Numeric Text Box** is part of the [**ra-inputs**](./) package.
+To use the **Numeric Text Box** you needs to install `ra-inputs` package.
+[Fallow this link](./#installation) on how to install the package.
+
+## API
+
+```jsx
+import { NumericTextBox } from '@ra/inputs';
+```
+
+## Component
+
+**NumericTextBox**
+
+Type: `React.PureComponent<NumberTextBoxProps>`
+
+## Props
+
+:::info INFO
+`NumberTextBoxProps` props extends [`TextInputProps`](/docs/components/inputs/text-box#props) from `react-native`
+so any [`TextInputProps`](/docs/components/inputs/text-box#props) is applicable also in **NumberTextBox** component.
+:::
+
+|  Name   | Type | Required | Default Value | Description |
+| -- | -- | -- | -- | -- |
+| actions | `boolean` | **false** | `true` | Boolean to determinate wether to show or not increment and decrement actions. |
+| step | `number` | **false** | `1 ` | Increments and decrement step. |
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />

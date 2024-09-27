@@ -1,0 +1,142 @@
+---
+id: ra-checklist
+title: Check List
+sidebar_position: 3
+last_update:
+  date: 2024-09-24
+  author: Redon Alla
+tags: [react, react-native, expo, framework, component]
+---
+
+**Check List** is package is part of **ra-inputs** for React Native, it provides a same base inputs UI library and functionality.
+
+**RA Check List** is part of the [**ra-inputs**](./) package.
+To use the **RA Check List** you needs to install `ra-inputs` package.
+[Fallow this link](./#installation) on how to install the package.
+
+## Dependencies
+- `ra-theme-context`
+- `ra-icons`
+- `ui-constants`
+
+import Installation from '../../_installation.mdx';
+
+<Installation title="RA Inputs" />
+
+```bash npm2yarn
+npm install C:/ReactNative/framework/ra-inputs
+```
+
+## API
+
+```jsx
+import { CheckList, CheckListProps } from '@ra/inputs';
+```
+
+## Component
+
+**CheckList**
+
+Type: `React.PureComponent<CheckListProps<T>>`
+
+## Props
+
+import Highlight from '@site/src/components/Highlight';
+
+|  Name   | Type | Required | Default Value | Description |
+| -- | -- | -- | -- | -- |
+| value | `T ❘ Array<T>` | **false** | `undefined` | Representing selected value/values from the available list. |
+| valueField | `string` | **false** | `undefined` | When the selected item is an object, always specify valueField. If you do not set a value for the field, the list will compare the items by reference, which may complicate debugging. For example, the selected value will not be applied, if it does not reference the exact passed data object. |
+| type | `InputType` | **inverse** | `1 ` | Input type. <Highlight type="warning">To have appearance for <code>'text'</code>, <code>'link'</code>, <code>'ghost'</code>, with custom color you should use hex colors.</Highlight> |
+| multipleSelect | `boolean` | **false** | `true` | Boolean value for single or multiple selection. |
+| size | `Sizes` | **false** | `normal` | Check Box size. |
+| radius | `BorderRadius` | **false** | `medium` | Check Box border radius. |
+| borderWidth | `BorderWidth` | **false** | `hairline` | Check Box borders width. |
+| borderColor | [`ColorValue`](https://reactnative.dev/docs/colors) | **false** | `undefined` | Borders color according `react-native` ColorValue. |
+| disabled | `boolean` | **false** | `false` | Indicator if input it is disabled or not. |
+| color | [`InputColor`](#inputcolor) | **false** | `theme.color.default` | Color by theme or a custom color according `react-native` ColorValue. |
+| backgroundColor | [`ColorValue`](https://reactnative.dev/docs/colors) | **false** | `undefined` | Input background color. |
+| label | `string` or [`React.ReactElement`](https://legacy.reactjs.org/blog/2014/10/14/introducing-react-elements.html) | **false** | `undefined` |  A `string` value to display as labal, or [`React.ReactElement`](https://legacy.reactjs.org/blog/2014/10/14/introducing-react-elements.html) to display a custom element as a label. |
+| labelStyle | `StyleProp<TextStyle>` or `((state: StateCallbackType) => StyleProp<TextStyle>)`| **false** | `undefined` |  Either text styles or a function that receives a boolean reflecting whether the component is currently active and returns text styles. |
+| onChange | <code>(event: NativeSyntheticEvent&lt;<a href="#checkboxeventt">CheckboxEvent&lt;T&gt;</a> ❘ SyntheticEvent&lt;HTMLInputElement, &lt;<a href="#checkboxeventt">CheckboxEvent&lt;T&gt;</a>&gt;) => void;</code> | **false** | `undefined` | Callback that is invoked when the user presses the checkbox. |
+| onValueChange | `(value: T) => void` | **false** | `undefined` | Callback that is invoked when the user presses the checkbox. |
+| direction | `row` ❘ `column` | **false** | `column` | Check element direction. |
+| material | `boolean` | **false** | `false` | Indicator if input should looks like Material input. |
+| helperText | `string` | **false** | `undefined` |  Helper text about input. |
+| children | <code>Array<a href='https://legacy.reactjs.org/blog/2014/10/14/introducing-react-elements.html'></a>&lt;<a href="/ra-framework-docks/docs/components/inputs/check-list#props">CheckProps&lt;T&gt;</a>&gt;</code>  | **false** | `undefined` | React element to render custom check boxes. |
+
+### InputType
+- `outlined`
+- `underlined`
+
+### Sizes
+- `small`
+- `default`
+- `medium`
+- `large`
+
+### BorderRadius
+- `small`
+- `medium`
+- `large`
+- `none`
+- `full`
+
+### BorderWidth
+- `none` => 0
+- `hairline` => ([StyleSheet.hairlineWidth](https://reactnative.dev/docs/stylesheet#hairlinewidth))
+- `thin` => 1
+- `base` => 2
+- `thick` => 3
+- `number` => any number
+
+### InputColor
+* `default`
+* `primary`
+* `secondary`
+* `info`
+* `success`
+* `warning`
+* `error`
+* `dark`
+* `light`
+* [`ColorValue`](https://reactnative.dev/docs/colors)
+
+### CheckboxEvent&lt;T&gt;
+
+|  Name   | Type | Required | Default Value | Description |
+| -- | -- | -- | -- | -- |
+| value | `T` | **false** | `undefined` | A value representing current checkbox value. |
+| target | `any` | **false** | `undefined` | On native platforms, a `NodeHandle` for the element on which the event has occurred. On web, a DOM node on which the event has occurred. |
+
+## Playground
+
+```jsx live noInline
+//Play with props to see live changes;
+
+function CheckListPlayground() {
+  const [textValues, setTextValues] = useState(['1', '2', '3']);
+
+  return (
+    <CheckList label='Check list label'
+              value={textValues}
+              color='success'
+              size='large'
+              backgroundColor='default'
+              borderColor='info'
+              borderWidth='thick'
+              radius='medium'
+              onValueChange={(newValues) => setTextValues([...newValues])}>
+      <Check value='1' label='Check 1' />
+      <Check value='2' label='Check 2' />
+      <Check value='3' label='Check 3' color='primary' />
+    </CheckList>
+  );
+}
+
+render(<CheckListPlayground />);
+```
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />

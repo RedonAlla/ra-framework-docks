@@ -1,0 +1,225 @@
+---
+id: ra-checkbox
+title: Check Box
+sidebar_position: 2
+last_update:
+  date: 2024-09-24
+  author: Redon Alla
+tags: [react, react-native, expo, framework, component]
+---
+
+The CheckBox is typically used to represent boolean values via a binary checked state
+
+**Check Box** is package is part of **ra-inputs** for React Native, it provides a same base inputs UI library and functionality.
+
+**RA Check Box** is part of the [**ra-inputs**](./) package.
+To use the **RA Check Box** you needs to install `ra-inputs` package.
+[Fallow this link](./#installation) on how to install the package.
+
+## Dependencies
+- `ra-theme-context`
+- `ra-icons`
+- `ui-constants`
+
+import Installation from '../../_installation.mdx';
+
+<Installation title="RA Inputs" />
+
+```bash npm2yarn
+npm install C:/ReactNative/framework/ra-inputs
+```
+
+## API
+
+```jsx
+import { Check, CheckProps } from '@ra/inputs';
+```
+
+## Component
+
+**Check**
+
+Type: `React.PureComponent<CheckProps<T>>`
+
+## Props
+
+import Highlight from '@site/src/components/Highlight';
+
+|  Name   | Type | Required | Default Value | Description |
+| -- | -- | -- | -- | -- |
+| value | `T` | **false** | `undefined` | Representing checkbox selected value. |
+| type | `CheckType` | **inverse** | `1 ` | Input type. <Highlight type="warning">To have appearance for <code>'text'</code>, <code>'link'</code>, <code>'ghost'</code>, with custom color you should use hex colors.</Highlight> |
+| size | `Sizes` | **false** | `normal` | Check Box size. |
+| radius | `BorderRadius` | **false** | `medium` | Check Box border radius. |
+| borderWidth | `BorderWidth` | **false** | `hairline` | Check Box borders width. |
+| borderColor | [`ColorValue`](https://reactnative.dev/docs/colors) | **false** | `undefined` | Borders color according `react-native` ColorValue. |
+| checkedBorderColor | [`ColorValue`](https://reactnative.dev/docs/colors) | **false** | `undefined` | Borders color according `react-native` ColorValue. |
+| disabled | `boolean` | **false** | `false` | Indicator if input it is disabled or not. |
+| color | [`InputColor`](#inputcolor) | **false** | `theme.color.default` | Color by theme or a custom color according `react-native` ColorValue. |
+| backgroundColor | [`ColorValue`](https://reactnative.dev/docs/colors) | **false** | `undefined` | Input background color. |
+| checkedBackgroundColor | [`ColorValue`](https://reactnative.dev/docs/colors) | **false** | `undefined` | Background color for active state according `react-native` ColorValue. |
+| label | `string` or [`React.ReactElement`](https://legacy.reactjs.org/blog/2014/10/14/introducing-react-elements.html) | **false** | `undefined` |  A `string` value to display as labal, or [`React.ReactElement`](https://legacy.reactjs.org/blog/2014/10/14/introducing-react-elements.html) to display a custom element as a label. |
+| labelStyle | `StyleProp<TextStyle>` or `((state: StateCallbackType) => StyleProp<TextStyle>)`| **false** | `undefined` |  Either text styles or a function that receives a boolean reflecting whether the component is currently active and returns text styles. |
+| checkElement | [`React.ReactElement`](https://legacy.reactjs.org/blog/2014/10/14/introducing-react-elements.html) | **false** | `undefined` | Custom element to display on checked status. |
+| unCheckElement | [`React.ReactElement`](https://legacy.reactjs.org/blog/2014/10/14/introducing-react-elements.html) | **false** | `undefined` | Custom element to display on unchecked status. |
+| onChange | <code>(event: NativeSyntheticEvent&lt;<a href="#checkboxeventt">CheckboxEvent&lt;T&gt;</a> ❘ SyntheticEvent&lt;HTMLInputElement, &lt;<a href="#checkboxeventt">CheckboxEvent&lt;T&gt;</a>&gt;) => void;</code> | **false** | `undefined` | Callback that is invoked when the user presses the checkbox. |
+| onValueChange | `(value: T) => void` | **false** | `undefined` | Callback that is invoked when the user presses the checkbox. |
+
+### CheckType
+- `outlined`
+- `solid`
+- `inverse`
+
+### Sizes
+- `small`
+- `default`
+- `medium`
+- `large`
+
+### BorderRadius
+- `small`
+- `medium`
+- `large`
+- `none`
+- `full`
+
+### BorderWidth
+- `none` => 0
+- `hairline` => ([StyleSheet.hairlineWidth](https://reactnative.dev/docs/stylesheet#hairlinewidth))
+- `thin` => 1
+- `base` => 2
+- `thick` => 3
+- `number` => any number
+
+### InputColor
+* `default`
+* `primary`
+* `secondary`
+* `info`
+* `success`
+* `warning`
+* `error`
+* `dark`
+* `light`
+* [`ColorValue`](https://reactnative.dev/docs/colors)
+
+### CheckboxEvent&lt;T&gt;
+
+|  Name   | Type | Required | Default Value | Description |
+| -- | -- | -- | -- | -- |
+| value | `T` | **false** | `undefined` | A value representing current checkbox value. |
+| target | `any` | **false** | `undefined` | On native platforms, a `NodeHandle` for the element on which the event has occurred. On web, a DOM node on which the event has occurred. |
+
+## Usecase Examples
+
+The following example demonstrates the **RA CheckBox** in action.
+
+### Value
+
+import Value from '@site/src/components/docs/ra-checkbox/value';
+
+<Value />
+
+
+### Type
+
+import Type from '@site/src/components/docs/ra-checkbox/type';
+
+<Type />
+
+### Sizes
+
+import Sizes from '@site/src/components/docs/ra-checkbox/sizes';
+
+<Sizes />
+
+### Radius
+
+import Radius from '@site/src/components/docs/ra-checkbox/redius';
+
+<Radius />
+
+### Colors
+
+import Colors from '@site/src/components/docs/ra-checkbox/colors';
+
+<Colors />
+
+### Border Width
+
+import BorderWidth from '@site/src/components/docs/ra-checkbox/border-width';
+
+<BorderWidth />
+
+### Border Colors
+
+import BorderColors from '@site/src/components/docs/ra-checkbox/border-colors';
+
+<BorderColors />
+
+### Checked Border Colors
+
+import BorderCheckedColor from '@site/src/components/docs/ra-checkbox/checked-border-colors';
+
+<BorderCheckedColor />
+
+### Disabled
+
+import Disabled from '@site/src/components/docs/ra-checkbox/disabled';
+
+<Disabled />
+
+### Background Color
+
+import DemoBackgroundColor from '@site/src/components/docs/ra-checkbox/background-color';
+
+<DemoBackgroundColor />
+
+### Checked Background Color
+
+import CheckedDemoBackgroundColor from '@site/src/components/docs/ra-checkbox/checked-background-color';
+
+<CheckedDemoBackgroundColor />
+
+### Label
+
+import Label from '@site/src/components/docs/ra-checkbox/label';
+
+<Label />
+
+### Custom Check Element
+
+import CustomCheckElement from '@site/src/components/docs/ra-checkbox/custom-check-element';
+
+<CustomCheckElement />
+
+### Using as Radio Button
+
+import RadioButton from '@site/src/components/docs/ra-checkbox/radio';
+
+<RadioButton />
+
+
+## Playground
+
+```jsx live noInline
+//Play with props to see live changes;
+
+function CheckPlayground() {
+  const [value, setValue] = useState(true);
+
+  return (
+    <Check value={value}
+          label='Try check box'
+          type='inverse'
+          size='large'
+          radius='large'
+          color='primary'
+          borderWidth='thick'
+          onValueChange={() => setValue(!value)}
+    />
+  );
+}
+
+render(<CheckPlayground />);
+```

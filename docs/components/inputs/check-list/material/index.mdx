@@ -1,0 +1,135 @@
+---
+id: ra-inputs-check-list-default-example
+title: Material Design
+sidebar_position: 1
+last_update:
+  date: 2024-09-24
+  author: Redon Alla
+tags: [react, react-native, expo, framework, component]
+---
+
+The following examples demonstrates the **RA Check List** in action as material design style.
+
+## Usecase Examples
+
+Usecase Examples with styels as material design.
+
+### Value
+
+import Value from '@site/src/components/docs/ra-check-list/material/values';
+
+<Value />
+
+### Custom Items
+
+import CustomItems from '@site/src/components/docs/ra-check-list/material/custom-items';
+
+<CustomItems />
+
+### Value Field
+
+import ValueField from '@site/src/components/docs/ra-check-list/material/value-field';
+
+<ValueField />
+
+### Multi Select
+
+import MultiSelect from '@site/src/components/docs/ra-check-list/material/multi-select';
+
+<MultiSelect />
+
+### Type
+
+import Type from '@site/src/components/docs/ra-check-list/material/type';
+
+<Type />
+
+
+### Colors
+
+import Colors from '@site/src/components/docs/ra-check-list/material/colors';
+
+<Colors />
+
+### Sizes
+
+import Sizes from '@site/src/components/docs/ra-check-list/material/sizes';
+
+<Sizes />
+
+### Disabled
+
+import Disabled from '@site/src/components/docs/ra-check-list/material/disabled';
+
+<Disabled />
+
+### Direction
+
+import Direction from '@site/src/components/docs/ra-check-list/material/direction';
+
+<Direction />
+
+### Border Colors
+
+import BorderColors from '@site/src/components/docs/ra-check-list/material/border-colors';
+
+<BorderColors />
+
+### Border Width
+
+import BorderWidth from '@site/src/components/docs/ra-check-list/material/border-width';
+
+<BorderWidth />
+
+### Background Colors
+
+import BackgroundColors from '@site/src/components/docs/ra-check-list/material/background-colors';
+
+<BackgroundColors />
+
+### Text Helper
+
+import TextHelper from '@site/src/components/docs/ra-check-list/material/helper-text';
+
+<TextHelper />
+
+### Label
+
+import Label from '@site/src/components/docs/ra-check-list/material/label';
+
+<Label />
+
+### Label Style
+
+import LabelStyle from '@site/src/components/docs/ra-check-list/material/label-style';
+
+<LabelStyle />
+
+## Playground
+
+```jsx live noInline
+//Play with props to see live changes;
+
+function CheckListPlayground() {
+  const [textValues, setTextValues] = useState(['1', '2', '3']);
+
+  return (
+    <CheckList label='Check list label'
+              material
+              value={textValues}
+              color='success'
+              size='large'
+              backgroundColor='default'
+              borderColor='info'
+              borderWidth='thick'
+              radius='medium'
+              onValueChange={(newValues) => setTextValues([...newValues])}>
+      <Check value='1' label='Check 1' />
+      <Check value='2' label='Check 2' />
+      <Check value='3' label='Check 3' color='primary' />
+    </CheckList>
+  );
+}
+
+render(<CheckListPlayground />);
+```

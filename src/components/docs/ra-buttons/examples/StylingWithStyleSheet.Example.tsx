@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 
 // highlight-start
-import Button from 'ra-buttons';
+import Button from '@ra/buttons';
 // highlight-end
 
 export default class extends React.PureComponent<{}> {

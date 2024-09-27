@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 
-import Button from 'ra-buttons';
+import Button from '@ra/buttons';
 
 
 type Props = {

@@ -3,8 +3,8 @@ import { Text, StyleSheet } from 'react-native';
 
 import { SKELETON_HEIGHT } from './constants';
 // highlight-start
-import SkeletonLoader, { Circle, Rect } from 'ra-skeleton-loading';
-import Icon from 'ra-icons/dist/icon';
+import SkeletonLoader, { Circle, Rect } from '@ra/skeleton-loading';
+import Icon from '@ra/icons';
 // highlight-end
 
 

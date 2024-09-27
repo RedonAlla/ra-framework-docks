@@ -1,9 +1,9 @@
 import React from "react";
 import { StyleSheet, TextInput } from "react-native";
 
-import Button from 'ra-buttons';
+import Button from '@ra/buttons';
 // highlight-start
-import BottomSheet from "ra-bottom-sheet";
+import BottomSheet from "@ra/bottom-sheet";
 // highlight-end
 
 import MockContainer from "./MockContainer";

@@ -1,7 +1,7 @@
 import React from "react";
 
 // highlight-start
-import Tag from 'ra-tags';
+import Tag from '@ra/tags';
 // highlight-end
 
 

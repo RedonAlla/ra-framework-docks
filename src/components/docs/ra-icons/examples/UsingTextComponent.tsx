@@ -8,7 +8,7 @@ export default class extends React.PureComponent<{}, {}> {
       <div className='example-block'>
         <Text style={[styles.icon1, styles.textIcon]}>{'\ue90e'}</Text>
         <Text style={[styles.icon2, styles.textIcon]}>{'\ue90d'}</Text>
-        <Text style={[styles.icon3, styles.textIcon]}>{'\ue913'}</Text>
+        <Text style={[styles.icon3, styles.textIcon]}>{'\ue91e'}</Text>
       </div>
     );
   }

@@ -3,7 +3,7 @@ id: ui-constants
 title: UI Constants
 sidebar_position: 1
 last_update:
-  date: 1/1/2000
+  date: 2024-09-24
   author: Redon Alla
 tags: [react, react-native, framework, utilities]
 ---
@@ -16,47 +16,53 @@ To use the **`ui-constants`** you need to download packages in your local storag
 
 For more details on how to install packages locally [fallow this link](/docs/getting-gtarted/installation).
 
+
 Installing packages using npm:
 ```bash npm2yarn
 npm install C:/ReactNative/framework/ui-constants
 ```
 
-```ts showLineNumbers
-import { StyleSheet } from 'react-native';
+## Valuse
 
-export const BASE_SIZE = 16;
-export const DISABLED_OPACITY = 0.4;
-export const GHOST_TRANSPARENCY = '40';
-export const GHOST_ACTIVE_TRANSPARENCY = '73';
-export const WHITE_TEXT_COLOR = '#FFFFFF';
-export const BLACK_TEXT_COLOR = '#424242';
+|  Name   | Type | Value |
+| ------- | ---- | ----- |
+| BASE_SIZE | `number` | 16 |
+| DISABLED_OPACITY | `number` | 0.4 |
+| GHOST_TRANSPARENCY | `string` | 40 |
+| GHOST_ACTIVE_TRANSPARENCY | `string` | 73 |
+| WHITE_TEXT_COLOR | [`ColorValue`](https://reactnative.dev/docs/colors) | #FFFFFF |
+| BLACK_TEXT_COLOR | [`ColorValue`](https://reactnative.dev/docs/colors) | #424242 |
+| DARK_OVERLAY | [`ColorValue`](https://reactnative.dev/docs/colors) | #00000021 |
+| LIGHT_OVERLAY | [`ColorValue`](https://reactnative.dev/docs/colors) | #FFFFFF21 |
+| BUTTON_PADDING_VERTICAL_MULTIPLIER | `number` | 0.16 |
+| BUTTON_PADDING_HORIZONTAL_MULTIPLIER | `number` | 1 |
+| FONT_SIZE | [`Enum`](#font_size) | |
+| BORDER_RADIUS | [`Enum`](#border_radius) | |
+| BORDER_WIDTH | [`Enum`](#border_width) | |
 
-export const DARK_OVERLAY = '#00000021';
-export const LIGHT_OVERLAY = '#FFFFFF21';
+### FONT_SIZE
+|  Name   | Type | Value |
+| ------- | ---- | ----- |
+| small | `number` | BASE_SIZE * 0.75 |
+| default | `number` | BASE_SIZE |
+| medium | `number` | BASE_SIZE * 1.25 |
+| large | `number` | BASE_SIZE * 1.5 |
 
-export const BUTTON_PADDING_VERTICAL_MULTIPLIER = 0.6;
-export const BUTTON_PADDING_HORIZONTAL_MULTIPLIER = 1;
+### BORDER_RADIUS
+|  Name   | Type | Value |
+| ------- | ---- | ----- |
+| none | `number` | 0 |
+| small | `number` | 2 |
+| medium | `number` | 4 |
+| large | `number` | 6 |
+| full | `number` | 99999 |
 
-export const FONT_SIZE = {
-  small: BASE_SIZE * 0.75,
-  default: BASE_SIZE,
-  medium: BASE_SIZE * 1.25,
-  large: BASE_SIZE * 1.5
-}
 
-export const BORDER_RADIUS = {
-  none: 0,
-  small: 2,
-  medium: 4,
-  large: 6,
-  full: 99999,
-}
-
-export const BORDER_WIDTH = {
-  none: 0,
-  hairline: StyleSheet.hairlineWidth,
-  thin: 1,
-  base: 2,
-  thick: 3,
-}
-```
+### BORDER_WIDTH
+|  Name  | Type | Value |
+| ------- | ---- | ----- |
+| none | `number` | 0 |
+| hairline | `number` | [`StyleSheet.hairlineWidth`](https://reactnative.dev/docs/stylesheet#hairlinewidth) |
+| thin | `number` | 1 |
+| base | `number` | 2 |
+| thick | `number` | 3 |
