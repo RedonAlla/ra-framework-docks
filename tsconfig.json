@@ -36,5 +36,8 @@
   ],
   "paths": {
     "react": [ "./node_modules/@types/react" ]
-  }
+  },
+  "resolve": {
+    "extensions": [".js", ".jsx", ".ts", ".tsx"],
+  },
 }

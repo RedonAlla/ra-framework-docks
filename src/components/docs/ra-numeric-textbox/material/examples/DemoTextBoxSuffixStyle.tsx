@@ -2,7 +2,7 @@ import React from 'react';
 import { ColorValue, StyleProp, StyleSheet, TextStyle } from "react-native";
 
 // highlight-start
-import { StateCallbackType, NumericTextBox } from 'ra-inputs';
+import { StateCallbackType, NumericTextBox } from '@ra/inputs';
 // highlight-end
 
 
@@ -11,11 +11,11 @@ export default class extends React.PureComponent<{}, {}> {
     return (
       <div className='example-block'>
 
-        <div className='column'>
+        <div className='demo-column'>
           <NumericTextBox material label='Label' placeholder='Style with StyleProp<TextStyle>' suffix="star" suffixStyle={styles.prefix} />
         </div>
 
-        <div className='column'>
+        <div className='demo-column'>
           <NumericTextBox material label='Label' placeholder='Style with function' suffix="star" suffixStyle={suffixStyle('rgb(35, 189, 224)', 'crimson')} />
         </div>
 

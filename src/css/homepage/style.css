@@ -45,9 +45,9 @@ video {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  padding: 0 25px;
+  padding: 0 22px;
   font-size: 16px;
-  line-height: 50px;
+  line-height: 42px;
   border-radius: 5px;
   z-index: 5;
   width: 100%;
@@ -61,6 +61,12 @@ video {
 
 .platform-tag span {
   margin-right: 10px;
+  position: relative;
+  display: contents;
+  font-size: 26px;
+  display: inline-block;
+  position: relative;
+  top: 4px;
 }
 
 .main-btn {
@@ -585,7 +591,7 @@ video {
     .header-hero-content {
       padding-top: 120px; } }
   .header-hero-content .header-title {
-    font-size: 42px; }
+    font-size: 2rem; }
     @media only screen and (min-width: 992px) and (max-width: 1199px) {
       .header-hero-content .header-title {
         font-size: 36px; } }
@@ -673,24 +679,30 @@ video {
     opacity: 0; } }
 
 .header-image {
-  padding-top: 80px;
   position: relative;
   z-index: 5; }
   .header-image .image {
     width: 100%; }
   .header-image .image-shape {
     position: absolute;
-    bottom: -135px;
-    left: -115px;
-    z-index: -1; }
+    bottom: -18px;
+    z-index: -1;
+    right: -6px;}
     @media (max-width: 767px) {
       .header-image .image-shape {
         left: -90px; } }
     .header-image .image-shape svg {
+      -moz-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      transform: scaleX(-1);
+      -ms-filter: fliph; /*IE*/
+      filter: fliph; 
       max-width: 350px; }
       @media (max-width: 767px) {
         .header-image .image-shape svg {
-          max-width: 250px; } }
+          max-width: 250px;
+        } }
 
 /*===========================
       03.SERVICES css 
@@ -762,30 +774,36 @@ video {
       margin: 0;
       font-size: 0.85rem;}
   .single-services.services-color-1 .services-icon {
-    background-color: #E7A019;
+    background-color: #ff6358;
   }
     .single-services.services-color-1 .services-icon::before {
-      background-color: rgba(231, 160, 25, 0.2); }
+      background-color: #ff635833; }
   .single-services.services-color-1 .services-content .services-title a:hover {
-    color: #E7A019; }
+    color: #ff6358; }
   .single-services.services-color-2 .services-icon {
-    background-color: #E54F4F; }
+    background-color: #5ec232; }
     .single-services.services-color-2 .services-icon::before {
-      background-color: rgba(229, 79, 79, 0.2); }
+      background-color: #5ec23233; }
   .single-services.services-color-2 .services-content .services-title a:hover {
-    color: #E54F4F; }
+    color: #5ec232; }
   .single-services.services-color-3 .services-icon {
-    background-color: #8950E4; }
+    background-color: #ffc107; }
     .single-services.services-color-3 .services-icon::before {
-      background-color: rgba(137, 80, 228, 0.2); }
+      background-color: #ffc10733; }
   .single-services.services-color-3 .services-content .services-title a:hover {
-    color: #8950E4; }
+    color: #ffc107; }
   .single-services.services-color-4 .services-icon {
-    background-color: #0898E7; }
+    background-color: #3e80ed; }
     .single-services.services-color-4 .services-icon::before {
-      background-color: rgba(8, 152, 231, 0.2); }
+      background-color: #3e80ed33; }
   .single-services.services-color-4 .services-content .services-title a:hover {
-    color: #0898E7; }
+    color: #3e80ed; }
+  .single-services.services-color-5 .services-icon {
+    background-color: #bf70cc; }
+    .single-services.services-color-5 .services-icon::before {
+      background-color: #bf70cc33; }
+  .single-services.services-color-5 .services-content .services-title a:hover {
+    color: #bf70cc; }
   .single-services:hover {
     -webkit-box-shadow: 0px 15px 17px 0px var(--ifm-color-emphasis-100);
     -moz-box-shadow: 0px 15px 17px 0px var(--ifm-color-emphasis-100);
@@ -865,26 +883,53 @@ video {
 /*===========================
      10.DOWNLOAD css 
 ===========================*/
+.download-area {
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+}
 .download-area .download-image {
   padding-top: 65px;
-  padding-left: 60px;
   padding-bottom: 60px;
   position: relative; }
+.download-area.mobile .download-image,
+.download-area.tablet .download-image {
+  padding-left: 60px;
+ }
   @media (max-width: 767px) {
-    .download-area .download-image {
+    .download-area.mobile .download-image,
+    .download-area.tablet .download-image {
       padding-left: 20px;
       padding-right: 20px; } }
-  .download-area .download-image .image {
-    -webkit-box-shadow: 0px 3px 25px 0px rgba(8, 153, 231, 0.2);
-    -moz-box-shadow: 0px 3px 25px 0px rgba(8, 153, 231, 0.2);
-    box-shadow: 0px 3px 25px 0px rgba(8, 153, 231, 0.2);
-    border-radius: 50px;
+  .download-area.mobile .download-image .image {
     max-width: 295px;
     margin: 0 auto; }
+  .download-area.tablet .download-image .image {
+      max-width: 500px;
+      margin: 0 auto; }
+  .download-area.desktop .download-image .image {
+    max-width: 750px;
+    max-height: 475px;
+    margin: 0 auto; }
     @media (max-width: 767px) {
+      .download-area.desktop .download-image .image {
+        max-width: 750px;
+        max-height: 250px;  
+        margin: 0 auto; }
+      .download-area .download-image {
+        display: flex;
+        justify-content: center;
+      }
       .download-area .download-image .image {
         max-width: 100%; } }
     @media only screen and (min-width: 576px) and (max-width: 767px) {
+      .download-area.desktop .download-image .image {
+          max-width: 750px;
+          max-height: 250px;  
+          margin: 0 auto; }
+      .download-area .download-image {
+        display: flex;
+        justify-content: center;
+      }
       .download-area .download-image .image {
         max-width: 295px; } }
   .download-area .download-image .download-shape-1 {
@@ -915,48 +960,58 @@ video {
 .download-content .text {
   margin-top: 35px; }
 
-.download-content ul {
-  padding-top: 35px; }
-  .download-content ul li {
-    display: inline-block;
-    margin-top: 15px; }
-    .download-content ul li a {
-      width: 210px;
-      height: 65px;
-      border-radius: 5px;
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flex;
-      display: -o-flex;
-      display: flex;
-      -ms-flex-align: center;
-      align-items: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-transition: all 0.3s ease-out 0s;
-      -moz-transition: all 0.3s ease-out 0s;
-      -ms-transition: all 0.3s ease-out 0s;
-      -o-transition: all 0.3s ease-out 0s;
-      transition: all 0.3s ease-out 0s; }
-      .download-content ul li a.app-store {
-        background-color: #0898E7;
-        -webkit-box-shadow: 0px 4px 10px 0px rgba(8, 152, 231, 0.4);
-        -moz-box-shadow: 0px 4px 10px 0px rgba(8, 152, 231, 0.4);
-        box-shadow: 0px 4px 10px 0px rgba(8, 152, 231, 0.4);
-        margin-right: 28px; }
-        .download-content ul li a.app-store:hover {
-          -webkit-box-shadow: 0px 4px 25px 0px rgba(8, 152, 231, 0.4);
-          -moz-box-shadow: 0px 4px 25px 0px rgba(8, 152, 231, 0.4);
-          box-shadow: 0px 4px 25px 0px rgba(8, 152, 231, 0.4); }
-      .download-content ul li a.play-store {
-        background-color: #525A63;
-        -webkit-box-shadow: 0px 4px 10px 0px rgba(82, 90, 99, 0.4);
-        -moz-box-shadow: 0px 4px 10px 0px rgba(82, 90, 99, 0.4);
-        box-shadow: 0px 4px 10px 0px rgba(82, 90, 99, 0.4); }
-        .download-content ul li a.play-store:hover {
-          -webkit-box-shadow: 0px 4px 25px 0px rgba(82, 90, 99, 0.4);
-          -moz-box-shadow: 0px 4px 25px 0px rgba(82, 90, 99, 0.4);
-          box-shadow: 0px 4px 25px 0px rgba(82, 90, 99, 0.4); }
+.btn-download-container {
+  display: flex;
+  column-gap: 1.5rem;
+}
+
+.btn-download {
+  flex: 1;
+  display: flex;
+  cursor: pointer;
+  padding: 0.8rem 2rem;
+  border-radius: 0.3rem;
+  justify-content: center;
+}
+
+.btn-download.android {
+  background-color: #525A63;
+}
+.btn-download.android:hover {
+  box-shadow: 0px 4px 25px 0px rgba(82, 90, 99, 0.4);
+}
+
+.btn-download.apple {
+  background: #0898E7;
+}
+.btn-download.apple:hover {
+  box-shadow: 0px 4px 25px 0px rgba(8, 152, 231, 0.4);
+}
+
+
+.btn-download [class^="icon-"] {
+  font-size: 2.5rem;
+  color: #fff;
+  display: inline-block;
+  position: relative;
+  top: 7px;
+  line-height: 23px;
+  padding-right: 1rem;
+}
+
+.btn-download small {
+  line-height: 16px;
+}
+.btn-download span {
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 23px;
+}
+
+.download-content .text-content {
+  color: #fff;
+  display: grid;
+}
 
 /*===========================
      10.FOOTER css 
@@ -1190,3 +1245,10 @@ video {
   .back-to-top:hover {
     background-color: rgba(8, 152, 231, 0.5);
     color: #fff; }
+
+
+dialog {
+  border: none;
+  border-radius: 10px;
+  padding: 30px;
+}

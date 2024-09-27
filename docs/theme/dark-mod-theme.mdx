@@ -2,7 +2,7 @@
 id: ra-theme-dark-mod-theme
 sidebar_position: 4
 last_update:
-  date: 1/1/2000
+  date: 2024-09-24
   author: Redon Alla
 tags: [react, react-native, expo, framework, component]
 ---
@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
 ```jsx title="/src/theme/colors.ts" showLineNumbers
 import { ColorValue } from 'react-native';
 // highlight-start
-import { dark, light, BaseTheme } from 'ra-theme-context';
+import { dark, light, BaseTheme } from '@ra/theme-context';
 // highlight-end
 
 export interface MyColorsColors extends BaseTheme {
@@ -51,7 +51,7 @@ import React from 'react';
 import { ColorSchemeName, Appearance } from 'react-native';
 
 // highlight-start
-import { ThemeProvider, BaseTheme } from 'ra-theme-context';
+import { ThemeProvider, BaseTheme } from '@ra/theme-context';
 // highlight-end
 import { darkTheme, lightTheme, MyColorsColors } from './colors';
 
@@ -114,7 +114,7 @@ import React from 'react';
 import { StyleSheet, ColorSchemeName, Pressable, View, Text, ColorValue } from 'react-native';
 
 // highlight-start
-import { useThemeContext } from 'ra-theme-context';
+import { useThemeContext } from '@ra/theme-context';
 // highlight-end
 
 type BtnToggleProps = {

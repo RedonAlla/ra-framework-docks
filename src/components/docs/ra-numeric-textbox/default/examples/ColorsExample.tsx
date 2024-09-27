@@ -1,7 +1,7 @@
 import React from 'react';
 
 // highlight-start
-import { NumericTextBox } from 'ra-inputs';
+import { NumericTextBox } from '@ra/inputs';
 // highlight-end
 
 
@@ -10,7 +10,7 @@ export default class extends React.PureComponent<{}, {}> {
     return (
       <div className='example-block'>
 
-        <div className='column'>
+        <div className='demo-column'>
           <NumericTextBox placeholder='primary' color='primary'/>
           <NumericTextBox placeholder='dark' color='dark'/>
           <NumericTextBox placeholder='info' color='info'/>
@@ -21,7 +21,7 @@ export default class extends React.PureComponent<{}, {}> {
           <NumericTextBox placeholder='hsl(349, 86%, 50%)' color='hsl(349, 86%, 50%)' />
         </div>
 
-        <div className='column'>
+        <div className='demo-column'>
           <NumericTextBox placeholder='secondary' color='secondary'/>
           <NumericTextBox placeholder='light' color='light'/>
           <NumericTextBox placeholder='success' color='success'/>

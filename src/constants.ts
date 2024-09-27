@@ -1,1 +1,1 @@
-export const TOTAL_COMPONENTS = 11;
+export const TOTAL_COMPONENTS = 13;

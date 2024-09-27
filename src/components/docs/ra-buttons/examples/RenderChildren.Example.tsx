@@ -2,9 +2,9 @@ import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
 // highlight-start
-import Button from 'ra-buttons';
+import Button from '@ra/buttons';
 // highlight-end
-import Icon from 'ra-icons/dist/icon';
+import Icon from '@ra/icons';
 
 export default class extends React.PureComponent<{}> {
   render() {

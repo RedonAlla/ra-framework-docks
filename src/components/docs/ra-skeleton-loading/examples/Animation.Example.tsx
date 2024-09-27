@@ -2,7 +2,7 @@ import React from 'react';
 
 import { SKELETON_HEIGHT } from './constants';
 // highlight-start
-import SkeletonLoader, { Circle, Rect } from 'ra-skeleton-loading';
+import SkeletonLoader, { Circle, Rect } from '@ra/skeleton-loading';
 
 
 

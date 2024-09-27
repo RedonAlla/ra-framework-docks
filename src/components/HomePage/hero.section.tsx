@@ -8,7 +8,7 @@ export default class extends React.PureComponent<{}, {}> {
           <Shades />
           <div className="container">
             <div className="row align-items-center justify-content-center justify-content-lg-between">
-              <div className="col col--5 col--6">
+              <div className="col col--4">
                 <div className="header-hero-content">
                   <h3
                     className="header-title wow fadeInLeftBig"
@@ -28,21 +28,21 @@ export default class extends React.PureComponent<{}, {}> {
                   </p>
                   <ul className="d-flex">
                     <li>
-                      <PlatformTag wowDuration="1.3s" wowDelay="0s" icon="icon-menu" text="Android" style={styles.platformAndroid} />
+                      <PlatformTag wowDuration="1.3s" wowDelay="0s" icon="icon-android" text="Android" style={styles.platformAndroid} />
                     </li>
                     <li>
-                      <PlatformTag wowDuration="1.5s" wowDelay="0s" icon="icon-menu" text="iOS" style={styles.platformIos} />
+                      <PlatformTag wowDuration="1.5s" wowDelay="0s" icon="icon-apple" text="iOS" style={styles.platformIos} />
                     </li>
                     <li>
-                      <PlatformTag wowDuration="2.2s" wowDelay="0s" icon="icon-menu" text="Web" style={styles.platformWeb} />
+                      <PlatformTag wowDuration="2.2s" wowDelay="0s" icon="icon-web" text="Web" style={styles.platformWeb} />
                     </li>
                   </ul>
                 </div>
               </div>
-              <div className="col col--2 col--3">
+              <div className="col col--8">
                 <div className="header-image">
                   <img
-                    src="/ra-framework-docks/img/header-app.png"
+                    src="/ra-framework-docks/img/platforms-demo.svg"
                     alt="app"
                     className="image wow fadeInRightBig"
                     data-wow-duration="1.3s"
@@ -55,7 +55,7 @@ export default class extends React.PureComponent<{}, {}> {
                     data-wow-delay="0.8s"
                     style={styles.headerShape}
                   >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="414.872" height="382.682" viewBox="0 0 414.872 382.682">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 414.872 382.682">
                       <path id="Path_95" data-name="Path 95" d="M175.933,183.556c97.165,0,175.933-90.955,175.933,6.211A175.933,175.933,0,0,1,0,189.766C0,92.6,78.768,183.556,175.933,183.556Z" transform="matrix(0.819, 0.574, -0.574, 0.819, 209.757, -118.704)" fill="#0898e7"/>
                     </svg>
                   </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 
 // highlight-start
-import Button from 'ra-buttons';
+import Button from '@ra/buttons';
 // highlight-end
 
 

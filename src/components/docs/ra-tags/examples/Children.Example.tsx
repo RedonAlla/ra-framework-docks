@@ -2,9 +2,9 @@ import React from "react";
 import { Text, StyleSheet, View } from "react-native";
 
 // highlight-start
-import Tag from 'ra-tags';
+import Tag from '@ra/tags';
 // highlight-end
-import Icon from "ra-icons/dist/icon";
+import Icon from "@ra/icons";
 
 
 export default class extends React.PureComponent<{}, {}> {

@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 
 // highlight-start
-import Avatar, { AvatarGroup } from 'ra-avatar';
+import Avatar, { AvatarGroup } from '@ra/avatar';
 // highlight-end
 
 

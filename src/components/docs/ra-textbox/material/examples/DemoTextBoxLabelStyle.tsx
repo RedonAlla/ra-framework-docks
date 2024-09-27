@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, ColorValue, StyleProp, TextStyle } from "react-native";
 
 // highlight-start
-import { StateCallbackType, TextBox } from 'ra-inputs';
+import { StateCallbackType, TextBox } from '@ra/inputs';
 // highlight-end
 
 
@@ -11,11 +11,11 @@ export default class extends React.PureComponent<{}, {}> {
     return (
       <div className='example-block'>
 
-        <div className='column'>
+        <div className='demo-column'>
           <TextBox material placeholder='Style with StyleProp<TextStyle>' label="Label" labelStyle={styles.label} />
         </div>
 
-        <div className='column'>
+        <div className='demo-column'>
           <TextBox material placeholder='Style with function' label="Label" labelStyle={labelStyles('rgb(35, 189, 224)', 'crimson')} />
         </div>
 

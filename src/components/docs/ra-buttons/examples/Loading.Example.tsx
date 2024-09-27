@@ -1,9 +1,9 @@
 import React from 'react';
 
 // highlight-start
-import Button from 'ra-buttons';
+import Button from '@ra/buttons';
 // highlight-end
-import { Spinner } from 'ra-icons';
+import { Spinner } from '@ra/icons';
 
 type State = {
   isLoading: boolean;

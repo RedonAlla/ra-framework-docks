@@ -62,7 +62,7 @@ module.exports = {
         <CodeBlock language="ts" title="src/typings/ra-icons/index.d.ts" showLineNumbers>
         {
 `/* You should remove " from "string" */
-declare module 'ra-icons' {
+declare module '@ra/icons' {
 
   /** Name of the icon to use. */
   interface IconName ${createIconNameInterface(result)}

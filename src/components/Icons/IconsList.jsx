@@ -1,13 +1,13 @@
 import React from 'react';
 import './Icons-list.styles.css';
 
-import icons from './icons';
+import { icons } from '@ra/icons';
 
 export default React.memo(() => {
   return (
     <div className='icons-list'>
       {
-        icons.map((key) =>
+        Object.keys(icons).map((key) =>
           <IconItem key={key} name={key}/>
         )
       }

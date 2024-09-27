@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import { light, dark } from 'ra-theme-context';
+import { light, dark } from '@ra/theme-context';
 
 
 export default React.memo(() => {

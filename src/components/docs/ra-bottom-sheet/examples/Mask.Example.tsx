@@ -2,9 +2,9 @@ import React from "react";
 import { BlurTint } from "expo-blur";
 import { StyleSheet } from "react-native";
 
-import Button from 'ra-buttons';
+import Button from '@ra/buttons';
 // highlight-start
-import BottomSheet from "ra-bottom-sheet";
+import BottomSheet from "@ra/bottom-sheet";
 // highlight-end
 
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
 // highlight-start
-import Avatar from 'ra-avatar';
+import Avatar from '@ra/avatar';
 // highlight-end
 import { imageExample } from './constants';
 

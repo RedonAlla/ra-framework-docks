@@ -1,7 +1,7 @@
 import React from 'react';
 
 // highlight-start
-import Avatar, { AvatarGroup } from 'ra-avatar';
+import Avatar, { AvatarGroup } from '@ra/avatar';
 // highlight-end
 
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
 // highlight-start
-import Icon from 'ra-icons';
+import Icon from '@ra/icons';
 // highlight-end
 
 import { ICON_SIZE } from '../constants';

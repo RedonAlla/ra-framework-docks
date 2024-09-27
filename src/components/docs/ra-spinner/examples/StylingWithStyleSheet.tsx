@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 
 // highlight-start
-import { Spinner } from 'ra-icons';
+import { Spinner } from '@ra/icons';
 // highlight-end
 
 

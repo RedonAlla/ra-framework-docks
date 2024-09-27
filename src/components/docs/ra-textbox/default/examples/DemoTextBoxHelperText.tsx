@@ -1,7 +1,7 @@
 import React from 'react';
 
 // highlight-start
-import { TextBox } from 'ra-inputs';
+import { TextBox } from '@ra/inputs';
 // highlight-end
 
 

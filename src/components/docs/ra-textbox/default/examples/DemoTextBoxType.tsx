@@ -1,7 +1,7 @@
 import React from 'react';
 
 // highlight-start
-import { TextBox } from 'ra-inputs';
+import { TextBox } from '@ra/inputs';
 // highlight-end
 
 
@@ -10,11 +10,11 @@ export default class extends React.PureComponent<{}, {}> {
     return (
       <div className='example-block'>
 
-        <div className='column'>
+        <div className='demo-column'>
           <TextBox placeholder='outlined' type='outlined' />
         </div>
 
-        <div className='column'>
+        <div className='demo-column'>
           <TextBox placeholder='underlined' type='underlined' />
         </div>
 

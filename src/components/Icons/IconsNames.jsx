@@ -1,10 +1,11 @@
 import React from 'react';
+import { icons } from '@ra/icons';
 
-import icons from './icons';
 
-export default React.memo(() => {
-  return (
-    <table>
+export default class extends React.PureComponent {
+  render() {
+    return (
+      <table>
       <thead>
         <tr>
           <td>Name</td>
@@ -14,7 +15,7 @@ export default React.memo(() => {
       </thead>
       <tbody>
       {
-        icons.map((key, index) =>
+        Object.keys(icons).map((key, index) =>
           <tr key={index}>
             <td>{key}</td>
             <td>{key}</td>
@@ -24,5 +25,6 @@ export default React.memo(() => {
       }
       </tbody>
     </table>
-  );
-});
+    );
+  }
+}

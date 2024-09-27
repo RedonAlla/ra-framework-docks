@@ -1,7 +1,7 @@
 import React from 'react';
 
 // highlight-start
-import { NumericTextBox } from 'ra-inputs';
+import { NumericTextBox } from '@ra/inputs';
 // highlight-end
 
 
