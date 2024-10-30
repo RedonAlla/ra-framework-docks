@@ -2,6 +2,6 @@
 
 
 
-window.addEventListener('DOMContentLoaded', (event) => {
-  loadFonts();
-});
+// window.addEventListener('DOMContentLoaded', (event) => {
+//   loadFonts();
+// });

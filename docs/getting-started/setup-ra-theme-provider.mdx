@@ -1,13 +1,12 @@
 ---
 id: setup-ra-theme-provider
 sidebar_position: 2
+title: Setup Theme Provider
 last_update:
   date: 2024-09-24
   author: Redon Alla
 tags: [react, react-native, expo, framework]
 ---
-
-# Setup Theme Provider
 
 **ThemeProvider** from *RA Framework* is a component that makes the theme available throughout your app. It uses **React's Context API**. 
 
@@ -19,7 +18,7 @@ If you are not familiar with React's Context we strongly suggest to follow **[th
 
 Add **ThemeProvider** from *RA Framework* to the root of your app and update App.js as follows examples.
 
-## Installation
+# Installation
 
 First of all you need to download `ra-theme-context` packages in your local storage and then install the package with `npm` locally.
 
@@ -93,7 +92,7 @@ class App extends React.Component {
 |  Name   | Type | Required | Default Value | Description |
 | -- | -- | -- | -- | -- |
 | colors | [`BaseTheme<TColors>`](#themeproviderprops) | **true** | null | Where **TColors** object with custom colors |
-| colorScheme  | `ColorSchemeName` | **false** | null | **ColorSchemeName** from `react-native` |
+| colorScheme  | [`ColorSchemeName`](https://reactnative.dev/docs/usecolorscheme#supported-color-schemes) | ***false*** | null | Value indicates the current user preferred color scheme. |
 
 ### BaseTheme
 

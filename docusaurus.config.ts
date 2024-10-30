@@ -32,6 +32,8 @@ const config: Config = {
     locales: ['en'],
   },
 
+  baseUrlIssueBanner: false,
+
   presets: [
     [
       'classic',
@@ -69,7 +71,6 @@ const config: Config = {
             
             require.resolve('./src/css/homepage/animate.css'),
             // require.resolve('./src/css/homepage/bootstrap.min.css'),
-            require.resolve('./src/css/homepage/lineicons.css'),
             require.resolve('./src/css/homepage/default.css'),
             require.resolve('./src/css/homepage/style.css'),
           ]
@@ -133,9 +134,9 @@ const config: Config = {
   // clientModules: [
   //   require.resolve('./static/js/_clarity.js'),
   // ],
-  clientModules: [
-    './static/js/popper.min.js',  './static/js/wow.min.js','./static/js/modernizr-3.7.1.min.js',
-  ],
+  // clientModules: [
+  //   './static/js/popper.min.js',  './static/js/wow.min.js','./static/js/modernizr-3.7.1.min.js',
+  // ],
 
   themeConfig: {
     // Replace with your project's social card
@@ -172,61 +173,49 @@ const config: Config = {
       ],
     },
     footer: {
-      style: 'light',
+      style: 'dark',
       links: [
         {
           title: 'Docs',
           items: [
             {
-              label: 'Getting Started',
-              to: '/docs/getting-started',
-            },
-            {
-              label: 'Theme',
-              to: '/docs/theme',
-            },
-            {
-              label: 'Components',
-              to: '/docs/getting-components',
-            },
-            {
-              label: 'Utilities',
-              to: '/docs/utilities',
+              label: 'Tutorial',
+              to: '/docs/intro',
             },
           ],
         },
-        // {
-        //   title: 'Community',
-        //   items: [
-        //     {
-        //       label: 'Stack Overflow',
-        //       href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-        //     },
-        //     {
-        //       label: 'Discord',
-        //       href: 'https://discordapp.com/invite/docusaurus',
-        //     },
-        //     {
-        //       label: 'Twitter',
-        //       href: 'https://twitter.com/docusaurus',
-        //     },
-        //   ],
-        // },
+        {
+          title: 'Community',
+          items: [
+            {
+              label: 'Stack Overflow',
+              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+            },
+            {
+              label: 'Discord',
+              href: 'https://discordapp.com/invite/docusaurus',
+            },
+            {
+              label: 'Twitter',
+              href: 'https://twitter.com/docusaurus',
+            },
+          ],
+        },
         {
           title: 'More',
           items: [
             {
-              label: 'Demo App',
-              href: 'https://redonalla.github.io/ra-framework-demo/',
+              label: 'Blog',
+              to: '/blog',
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/RedonAlla/ra-framework-docks',
+              href: 'https://github.com/facebook/docusaurus',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} RA Framework, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
     prism: {
       additionalLanguages: [

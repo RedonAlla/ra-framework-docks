@@ -15,7 +15,7 @@
 }
 @font-face {
   font-family: 'Regular';
-  src: url('/static/fonts/framework/Roboto-Bold.ttf') format("truetype");
+  src: url('/static/fonts/framework/Roboto-Regular.ttf') format("truetype");
 }
 @font-face {
   font-family: 'Italic';
